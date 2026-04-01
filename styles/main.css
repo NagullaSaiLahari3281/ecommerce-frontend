@@ -68,10 +68,15 @@ body {
   height: 80vh;
   background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
               url("../assets/hero.jpeg") center/cover no-repeat;
+  display:flex;
+  justify-content:center;
+  aligin-items:center;
+  text-aligin:center;
 }
 
 .hero-content {
   max-width: 600px;
+  margin:auto;
   animation: fadeIn 1.5s ease-in-out;
 }
 
