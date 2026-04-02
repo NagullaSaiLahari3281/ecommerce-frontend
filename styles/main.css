@@ -1,5 +1,6 @@
 body {
   margin: 0;
+
   font-family: Arial, sans-serif;
   background: #f5f5f5;
    overflow-x: hidden;
@@ -66,16 +67,72 @@ body {
   padding: 2px 6px;
   border-radius: 50%;
 }
+/* ABOUT,CONTACT*/
+.info-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 50px 20px;
+}
+
+.info-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.contact {
+  width:100%;
+  min-height:300px;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
+    max-width:400px;
+    text-align: center;
+}
+.info-card h2 {
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    color: #555;
+}
 
 /* HERO */
+section {
+    width: 100%;
+}
 .hero {
-  height: 80vh;
-  background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
-              url("../assets/hero.jpeg") center/cover no-repeat;
-  display:flex;
-  justify-content: center;
-  aligin-items: center;
-  text-aligin: center;
+    height: 100vh; 
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("../assets/hero.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
@@ -142,7 +199,7 @@ body {
 
 .card img {
   width: 100%;
-  height: 180px;
+  height: 200px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -187,33 +244,24 @@ body {
 }
 
 /* RESPONSIVE */
-
 @media (max-width: 768px) {
 
-    .nav {
-        display: flex;
+    /* NAVBAR */
+    .header {
         flex-direction: column;
         align-items: center;
-        padding: 10px;
-    }
-
-    .logo {
-        margin-bottom: 10px;
+        gap: 10px;
     }
 
     .nav-links {
-        display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 10px;
-        margin-bottom: 10px;
     }
 
-    .nav-right {
-        display: flex;
+    .search-section {
         width: 100%;
         justify-content: center;
-        gap: 10px;
     }
 
     .search-bar {
@@ -221,27 +269,42 @@ body {
         padding: 8px;
     }
 
-    .cart {
-        font-size: 20px;
+    /* HERO */
+    .hero {
+        height: 70vh;
+        padding: 20px;
     }
 
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    /* PRODUCTS */
     .product-grid {
-        display: grid;
         grid-template-columns: 1fr;
         gap: 20px;
         padding: 15px;
     }
-    .card {
-        padding: 15px;
-        border-radius: 15px;
-    }
 
     .card img {
-        height: auto;
-        max-width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    /* ABOUT + CONTACT */
+    .about h2, .contact h2 {
+        font-size: 24px;
+    }
+
+    .about p, .contact p {
+        font-size: 16px;
+    }
+     .contact-box {
+        width: 95%;
+        padding: 25px;
     }
 }
-
-
-
-    
